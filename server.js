@@ -65,8 +65,8 @@ express.post('/login/admin/',(req,res) => {
     var data = req.body;
     if(data.Username == 'Demon' && data.Password == 'syj000603'){
         req.session.Username = data.Username;
-        // res.send('OK')
-        res.status(302).send('/admin')
+        res.send('OK')
+        // res.status(302).send('/admin')
     }else{
         res.status(400).send('用户名或密码不正确')
     }

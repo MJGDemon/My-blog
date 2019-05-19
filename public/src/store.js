@@ -6,15 +6,6 @@ import { resolve } from 'path';
 import { rejects } from 'assert';
 
 Vue.use(Vuex)
-axios.interceptors.response.use((res) => {
-    return response;
-}, function (error) {
-    if(error.response.status == '302'){
-        location.href = error.response.data;
-    } else {
-        return Promise.reject(error);
-    }
-});
 export default function createStore() {
       let store =  new Vuex.Store({
             state: {
